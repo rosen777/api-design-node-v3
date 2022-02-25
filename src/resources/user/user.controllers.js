@@ -1,4 +1,7 @@
+import { crudControllers } from '../../utils/crud'
 import { User } from './user.model'
+
+export default crudControllers(User)
 
 export const me = (req, res) => {
   res.status(200).json({ data: req.user })
